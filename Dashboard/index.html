@@ -1,75 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/CanSat.css">
+    <link rel="icon" href="img/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CanSat Dashboard</title>
+    <title>SkyByte Dashboard</title>
 </head>
 <body>
-    <div class="container">
-        <h1>CanSat Dashboard</h1>
-        <div class="dashboard">
-            <div class="line-graph">
-                <h2>Pressure</h2>
-                <canvas id="pressureGraph" width="300" height="200"></canvas>
+    <div class="header">
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <h1>SkyByte Dashboard</h1>
+    </div>
+    <div class="main">
+        <div class="content">
+            <div class="graph">
+                Temperature
+                <canvas class="line-graph"></canvas>
             </div>
-            <div class ="line-graph">
-                <h2>Altitude</h2>
-                <canvas id="altitudeGraph" width="300" height="200"></canvas>
+        </div>
+        <div class="content">
+            <div class="graph">
+                Pressure
+                <canvas class="line-graph"></canvas>
             </div>
-            <div class = "line-graph">
-                <h2>Temperature</h2>
-                <canvas id="temperatureGraph" width="300" height="200"></canvas>
+        </div>
+        <div class="content">
+            <div class="graph">
+                Altitude
+                <canvas class="line-graph"></canvas>
             </div>
-            <div class="map">
-                <h2>Map</h2>
-                <div id="mapPlaceholder">Map Placeholder</div>
-            </div>
-            <div class="data-display">
-                <div class="display-left">
-                    <div id="currentLong">Current Longitude: --</div>
-                    <div id="currentLat">Current Latitude: --</div>   
-                    <div id="startLong">Start Longitude: --</div>
-                    <div id="startLat">Start Latitude: --</div>
-                </div>
-                <div class="display-right">
-                    <div id="pressure">Pressure: --</div>
-                    <div id="altitude">Altitude: --</div>
-                    <div id="temperature">Temperature: --</div>
-                    <div id="hdop">HDOP: --</div>
+        </div>
+        <div class="content">
+            <div class="graph">
+                Map
+                <canvas class="line-graph"></canvas>
             </div>
         </div>
     </div>
-    <script src = "script.js"></script>
-    <script>
-        const data = []; // Voorbeelddata
-        const canvas = document.getElementById('pressureGraph');
-
-        const data2 = []; // Voorbeelddata
-        const canvas2 = document.getElementById('altitudeGraph');
-
-        const data3 = []; // Voorbeelddata
-        const canvas3 = document.getElementById('temperatureGraph');
-
-        graphDraw(canvas, data);
-        graphDraw(canvas2, data2);
-        graphDraw(canvas3, data3);
-
-        setInterval(() => {
-            // Simuleer nieuwe data binnenkomen
-            const newDataPoint = Math.random() * 100; // Vervang dit met echte data
-            data.push(newDataPoint);
-            graphDraw(canvas, data);
-
-            const newDataPoint2 = Math.random() * 100; // Vervang dit met echte data
-            data2.push(newDataPoint2);
-            graphDraw(canvas2, data2);
-
-            const newDataPoint3 = Math.random() * 100; // Vervang dit met echte data
-            data3.push(newDataPoint3);  
-            graphDraw(canvas3, data3);
-        }, 1000); // Elke seconde nieuwe data
-    </script>
 </body>
 </html>
