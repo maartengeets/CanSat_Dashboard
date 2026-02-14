@@ -1,5 +1,4 @@
 .header{
-    background-color: green;
     width: 100%;
     height: 50px;
     display: flex;
@@ -10,14 +9,13 @@
 
 .main{
     margin-top: 10px;
-    background-color: blue;
     display: flex;
     justify-content: center;
 }
 
 .content{
-    background-color: red;
-    border: 4px solid black;
+    border: 2px solid black;
+    border-radius: 8px;
     margin-right: 10px;
     width: 250px;
     display: grid;
@@ -26,7 +24,6 @@
 }
 
 .title{
-    background-color: green;
     width: 150px;
     height: 50px;
     display: flex;
@@ -35,7 +32,6 @@
 }
 
 .graph{
-    background-color: yellow;
     margin: 10px;
     display: grid;
     justify-content: center;
@@ -57,4 +53,30 @@
     left: 10px;
     top: 20px;
     margin-left: 10px;
+}
+
+.data{
+    margin-top: 10px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.data-item{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.footer{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Courier New, monospace;
 }
